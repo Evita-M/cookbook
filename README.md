@@ -9,6 +9,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Lucide](https://img.shields.io/badge/Lucide-000?style=for-the-badge&logo=lucide&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
+![Vitest](https://img.shields.io/badge/vitest-222?style=for-the-badge&logo=vitest&logoColor=FCC72C)
 ![pnpm](https://img.shields.io/badge/pnpm-222?style=for-the-badge&logo=pnpm&logoColor=F69220)
 
 This project was created as an opportunity to explore and evaluate Storyblok CMS in a real-world scenario. As someone passionate about cooking, building a cookbook application was a natural and engaging choice for this technical demonstration.
