@@ -25,13 +25,13 @@ export const Flag = ({ category, className }: FlagProps) => {
   return (
     <span
       className={clsx(
-        'inline-block rounded-lg px-4 py-2 text-sm font-bold tracking-[0.05em]',
+        'inline-block rounded-lg px-4 py-2 text-sm font-bold tracking-[0.03em]',
         textColor,
         className
       )}
       style={{ backgroundColor: bgColor }}
     >
-      {category}
+      <p>{category}</p>
     </span>
   );
 };

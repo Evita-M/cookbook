@@ -6,7 +6,7 @@ interface RatingProps {
   size?: 'sm' | 'md';
 }
 
-const YELLOW = '#FFD66B';
+const STAR_COLOR = 'var(--color-yellow)';
 const STAR_SIZE = {
   sm: 16,
   md: 20,
@@ -17,7 +17,6 @@ export const Rating: React.FC<RatingProps> = ({
   max = 5,
   size = 'md',
 }) => {
-  // Helper to render a star (filled, half, or empty)
   const renderStar = (type: 'full' | 'half' | 'empty', idx: number) => {
     if (type === 'full') {
       return (
@@ -26,8 +25,8 @@ export const Rating: React.FC<RatingProps> = ({
           width={STAR_SIZE[size]}
           height={STAR_SIZE[size]}
           viewBox="0 0 24 24"
-          fill={YELLOW}
-          stroke={YELLOW}
+          fill={STAR_COLOR}
+          stroke={STAR_COLOR}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -43,7 +42,7 @@ export const Rating: React.FC<RatingProps> = ({
           height={STAR_SIZE[size]}
           viewBox="0 0 24 24"
           fill="none"
-          stroke={YELLOW}
+          stroke={STAR_COLOR}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -51,7 +50,7 @@ export const Rating: React.FC<RatingProps> = ({
           <defs>
             <linearGradient id={`half-star-${idx}`}>
               {' '}
-              <stop offset="50%" stopColor={YELLOW} />{' '}
+              <stop offset="50%" stopColor={STAR_COLOR} />{' '}
               <stop offset="50%" stopColor="white" stopOpacity="1" />{' '}
             </linearGradient>
           </defs>
@@ -69,7 +68,7 @@ export const Rating: React.FC<RatingProps> = ({
           height={STAR_SIZE[size]}
           viewBox="0 0 24 24"
           fill="none"
-          stroke={YELLOW}
+          stroke={STAR_COLOR}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
