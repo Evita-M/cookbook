@@ -56,7 +56,7 @@ NEXT_PUBLIC_STORYBLOK_SPACE_ID=<YOUR-STORYBLOK-SPACE-ID>
 To keep your app type-safe and in sync with your Storyblok space, generate TypeScript types:
 
 ```bash
-pnpm run refresh-sb
+pnpm refresh-sb
 ```
 
 This will:
