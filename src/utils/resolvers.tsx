@@ -9,6 +9,9 @@ export const resolvers = {
       )}
     </ul>
   ),
+  [BlockTypes.HEADING]: (node: any) => (
+    <h2 className="mt-8 mb-4 text-2xl font-bold">{node.children}</h2>
+  ),
   [BlockTypes.OL_LIST]: (node: any) => (
     <ol className="my-4 list-decimal pl-6">
       {node.children?.map((child: any, idx: number) =>

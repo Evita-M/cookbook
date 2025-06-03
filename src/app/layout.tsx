@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { StoryblokProvider } from '@/components/StoryblokProvider';
 import { Lato, Satisfy } from 'next/font/google';
-import { HeartIcon } from 'lucide-react';
-import { NavLink } from '@/components/NavLink';
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
+import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
   title: 'CookBook',
@@ -20,11 +21,7 @@ const lato = Lato({
   subsets: ['latin'],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <StoryblokProvider>
       <html lang="en" className="h-full">
@@ -32,38 +29,9 @@ export default function RootLayout({
           suppressHydrationWarning
           className={`${satisfy.className} ${lato.className} flex h-full flex-col bg-gray-100`}
         >
-          <header>
-            <nav>
-              <ul className="flex w-full items-center justify-center gap-8 px-2 py-4 sm:flex-row sm:gap-6">
-                <li>
-                  <NavLink href="/" label="Home" />
-                </li>
-                <li>
-                  <NavLink href="/recipes" label="Recipes" />
-                </li>
-              </ul>
-            </nav>
-          </header>
+          <Header />
           {children}
-          <footer className="h-20 bg-[#2C3930] py-4 text-white">
-            <p className="text-center">
-              Made with{' '}
-              <HeartIcon
-                className="inline-block"
-                strokeWidth="0"
-                fill="#f1bafc	"
-              />{' '}
-              by{' '}
-              <a
-                className="text-[#f1bafc] transition-colors hover:text-white"
-                href="https://github.com/Evita-M"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Evita-M
-              </a>
-            </p>
-          </footer>
+          <Footer />
         </body>
       </html>
     </StoryblokProvider>
