@@ -1,3 +1,4 @@
+import { Heading } from '@/components/Heading';
 import { RecommendedRecipe } from '@/components/RecommendedRecipe';
 import { getStoryblokApi } from '@/storyblok';
 import { StoryblokStory } from '@storyblok/react/rsc';
@@ -23,18 +24,19 @@ const fetchAllRecipes = async () => {
 const RecipesPage = async () => {
   const story = await fetchRecipesPage();
   const recipes = await fetchAllRecipes();
+
   return (
-    <div>
-      <StoryblokStory
-        bridgeOptions={{ resolveRelations: ['recommended_tours.tours'] }}
-        story={story}
-      />
-      <div>
-        {recipes.map((recipe: any) => (
-          <RecommendedRecipe story={recipe} key={recipe.content._uid} />
-        ))}
-      </div>
-    </div>
+    <main className="mx-auto max-w-7xl flex-1 px-4">
+      <StoryblokStory story={story} />
+      <section className="section px-4">
+        <Heading text={story.content.headline} />
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {recipes.map((recipe) => (
+            <RecommendedRecipe story={recipe} key={recipe.content._uid} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 };
 

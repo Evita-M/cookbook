@@ -15,11 +15,11 @@ const categoryColors: Record<string, string> = {
   Pastry: '#F9E7C2', // light beige
   Pasta: '#FDEBD0', // pale orange
   Soup: '#D6EAF8', // light blue
-  Vegetarian: '#E8F8F5', // minty blue-green
+  Vegeterian: '#D0F0C0', // light-green
   Default: '#F0F0F0', // light gray
 };
 
-export const Flag: React.FC<FlagProps> = ({ category, className }) => {
+export const Flag = ({ category, className }: FlagProps) => {
   const bgColor = categoryColors[category] || categoryColors.Default;
   const textColor = 'text-gray-900';
   return (

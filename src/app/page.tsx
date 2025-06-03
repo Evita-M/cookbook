@@ -5,7 +5,7 @@ const fetchHomePage = async () => {
   const client = getStoryblokApi();
   const response = await client.getStory(`home`, {
     version: 'draft',
-    resolve_relations: ['recommended_recipes.recipes'],
+    resolve_relations: 'recommended_recipes.recipes',
   });
   return response.data.story;
 };
@@ -14,7 +14,7 @@ const HomePage = async () => {
   const story = await fetchHomePage();
   return (
     <StoryblokStory
-      bridgeOptions={{ resolveRelations: ['recommended_tours.tours'] }}
+      bridgeOptions={{ resolveRelations: ['recommended_recipes.recipes'] }}
       story={story}
     />
   );

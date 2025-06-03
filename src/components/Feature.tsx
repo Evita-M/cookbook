@@ -14,7 +14,7 @@ interface FeatureProps {
 }
 
 type Variant = 'primary' | 'secondary' | 'tertiary' | '';
-const ICON_SIZE = 30;
+const ICON_SIZE = 100;
 
 function splitHeadline(headline: string) {
   const words = headline.trim().split(' ');
@@ -42,26 +42,24 @@ export const Feature = ({ blok, index }: FeatureProps) => {
   }, [variant]);
 
   const accentImage = useMemo<ReactNode>(() => {
-    const className = `h-${ICON_SIZE} w-${ICON_SIZE} text-white`;
+    const className = `text-white`;
     const accentImages: Record<Variant, React.ReactNode> = {
-      primary: <CroissantIcon className={className} aria-hidden="true" />,
+      primary: (
+        <CroissantIcon
+          size={ICON_SIZE}
+          className={className}
+          aria-hidden="true"
+        />
+      ),
       secondary: (
         <PizzaIcon size={ICON_SIZE} className={className} aria-hidden="true" />
       ),
-      tertiary: <CitrusIcon className={className} aria-hidden="true" />,
+      tertiary: (
+        <CitrusIcon size={ICON_SIZE} className={className} aria-hidden="true" />
+      ),
       '': <PizzaIcon className={className} aria-hidden="true" />,
     };
     return accentImages[variant] || accentImages[''];
-  }, [variant]);
-
-  const rotation = useMemo(() => {
-    const rotationMap: Record<Variant, string> = {
-      primary: '-10',
-      secondary: '20',
-      tertiary: '-90',
-      '': '0',
-    };
-    return rotationMap[variant] || '0';
   }, [variant]);
 
   const isTertiary = variant === 'tertiary';

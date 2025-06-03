@@ -27,8 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <StoryblokProvider>
-      <html lang="en">
-        <body className={`${satisfy.className} ${lato.className} bg-gray-100`}>
+      <html lang="en" className="h-full">
+        <body
+          suppressHydrationWarning
+          className={`${satisfy.className} ${lato.className} flex h-full flex-col bg-gray-100`}
+        >
           <header>
             <nav>
               <ul className="flex w-full items-center justify-center gap-8 px-2 py-4 sm:flex-row sm:gap-6">

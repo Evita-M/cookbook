@@ -6,6 +6,7 @@ import { Grid } from './components/Grid';
 import { Testimonial } from './components/Testimonial';
 import { Feature } from './components/Feature';
 import { RecommendedRecipes } from './components/RecommendedRecipes';
+import { Author } from './components/Author';
 
 const cachedFetch = (input: RequestInfo | URL, init?: RequestInit) => {
   return fetch(input, {
@@ -28,6 +29,7 @@ export const getStoryblokApi = storyblokInit({
     feature: Feature,
     testimonial: Testimonial,
     recommended_recipes: RecommendedRecipes,
+    author: Author,
   },
   enableFallbackComponent: true,
 });

@@ -1,6 +1,5 @@
 import { getStoryblokApi } from '@/storyblok';
 import { StoryblokStory } from '@storyblok/react/rsc';
-import { draftMode } from 'next/headers';
 
 export const generateStaticParams = async () => {
   const client = getStoryblokApi();
@@ -16,6 +15,7 @@ const fetchRecipePage = async (slug: string) => {
   const client = getStoryblokApi();
   const response = await client.getStory(`recipes/${slug}`, {
     version: 'draft',
+    resolve_relations: 'author',
   });
   return response.data.story;
 };

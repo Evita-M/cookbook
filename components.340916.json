@@ -1,6 +1,53 @@
 {
   "components": [
     {
+      "name": "author",
+      "display_name": "",
+      "description": "",
+      "created_at": "2025-06-03T08:46:19.679Z",
+      "updated_at": "2025-06-03T08:47:16.480Z",
+      "id": 7411077,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "Lvecx6xGTRKSn9Y_qHo_Zg"
+        },
+        "job_title": {
+          "type": "text",
+          "pos": 1,
+          "required": true,
+          "id": "esfuyIjFRUi8wD9M_7Iqow"
+        },
+        "img": {
+          "type": "asset",
+          "pos": 2,
+          "filetypes": [
+            "images"
+          ],
+          "required": true,
+          "id": "rJahxdOOQvKD8df44IqvQA"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "author",
+      "component_group_uuid": "8f5d3937-6ebe-4181-af12-2bcef12a2b4c",
+      "color": "#ef6252",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Nestable Blocks"
+    },
+    {
       "name": "feature",
       "display_name": null,
       "description": "",
@@ -68,13 +115,14 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-06-01T15:12:41.902Z",
-      "updated_at": "2025-06-01T19:09:37.529Z",
+      "updated_at": "2025-06-03T06:42:42.134Z",
       "id": 7405026,
       "schema": {
         "headline": {
           "type": "text",
           "pos": 0,
-          "id": "--iubyCwQImnBEBX9uViMA"
+          "id": "--iubyCwQImnBEBX9uViMA",
+          "required": true
         },
         "items": {
           "type": "bloks",
@@ -113,7 +161,7 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-06-01T15:09:48.035Z",
-      "updated_at": "2025-06-02T15:04:55.343Z",
+      "updated_at": "2025-06-03T10:18:45.433Z",
       "id": 7405025,
       "schema": {
         "headline": {
@@ -137,6 +185,25 @@
             "images"
           ],
           "id": "fzbBacQWR6Kq-lr_D_NQzA"
+        },
+        "variant": {
+          "type": "option",
+          "pos": 3,
+          "use_uuid": true,
+          "options": [
+            {
+              "_uid": "4d5a4729-cbc8-40b2-b01b-3a39fa112381",
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "_uid": "4b01ef18-2c37-48e9-a47c-c13f99a788ee",
+              "value": "secondary",
+              "name": "secondary"
+            }
+          ],
+          "required": true,
+          "id": "7KAZhQPfRR2uyL2VXLRCjg"
         }
       },
       "image": null,
@@ -197,7 +264,7 @@
       "display_name": null,
       "description": null,
       "created_at": "2025-06-01T11:27:27.458Z",
-      "updated_at": "2025-06-02T21:01:51.475Z",
+      "updated_at": "2025-06-03T12:29:18.673Z",
       "id": 7404724,
       "schema": {
         "body": {
@@ -227,7 +294,8 @@
           "type": "text",
           "pos": 2,
           "id": "pojAfKI5TKO37E4-FoTv_A",
-          "required": true
+          "required": true,
+          "max_length": 400
         },
         "preparation_time": {
           "type": "text",
@@ -243,7 +311,8 @@
           "required": true,
           "filetypes": [
             "images"
-          ]
+          ],
+          "allow_external_url": true
         },
         "category": {
           "type": "option",
@@ -303,6 +372,44 @@
           "min_value": 1,
           "max_value": 5,
           "steps": 1
+        },
+        "author": {
+          "type": "bloks",
+          "pos": 8,
+          "required": true,
+          "id": "E4vh47QJS4amcGrfUcpMMQ",
+          "minimum": 1,
+          "maximum": 2
+        },
+        "difficulty": {
+          "type": "option",
+          "pos": 9,
+          "use_uuid": true,
+          "required": true,
+          "options": [
+            {
+              "_uid": "be681904-0f7b-446f-91e1-58e4d819db0f",
+              "name": "easy",
+              "value": "easy"
+            },
+            {
+              "_uid": "646f977f-7aa8-46bd-86cf-355cc814c61a",
+              "value": "medium",
+              "name": "medium"
+            },
+            {
+              "_uid": "c6ca0306-4588-41ba-8515-deb094049409",
+              "value": "hard",
+              "name": "hard"
+            },
+            {
+              "_uid": "4d3eda7d-d877-42f2-a648-89915009ff24",
+              "value": "extra hard",
+              "name": "extra_hard"
+            }
+          ],
+          "id": "7RWYQhooTsW_iKILRJkLnw",
+          "default_value": "medium"
         }
       },
       "image": null,
@@ -326,7 +433,7 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-06-01T15:15:48.768Z",
-      "updated_at": "2025-06-02T20:48:36.270Z",
+      "updated_at": "2025-06-02T21:37:06.429Z",
       "id": 7405029,
       "schema": {
         "headline": {
@@ -344,7 +451,7 @@
           "filter_content_type": [
             "recipe"
           ],
-          "min_options": "2",
+          "min_options": "3",
           "max_options": "3"
         }
       },

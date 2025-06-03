@@ -1,22 +1,14 @@
-import {
-  RecipeStoryblok,
-  RecommendedRecipesStoryblok,
-} from '@/types/storyblok';
 import { Heading } from './Heading';
 import { RecommendedRecipe } from './RecommendedRecipe';
-import { ISbStoryData, storyblokEditable } from '@storyblok/react/rsc';
+import { storyblokEditable } from '@storyblok/react/rsc';
 
-interface RecommendedRecipesProps {
-  blok: RecommendedRecipesStoryblok;
-}
-
-export const RecommendedRecipes = ({ blok }: RecommendedRecipesProps) => {
+export const RecommendedRecipes = (params: any) => {
   return (
-    <section {...storyblokEditable(blok)} className="section my-20">
-      <Heading text={blok.headline} />
+    <section {...storyblokEditable(params.blok)} className="section">
+      <Heading text={params.blok.headline} />
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-        {blok.recipes?.map((recipe: ISbStoryData<RecipeStoryblok>) => (
-          <RecommendedRecipe story={recipe.content} key={recipe.content._uid} />
+        {params.blok.recipes.map((recipe: any) => (
+          <RecommendedRecipe story={recipe} key={recipe.content._uid} />
         ))}
       </div>
     </section>
