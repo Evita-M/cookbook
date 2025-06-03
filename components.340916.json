@@ -1,0 +1,426 @@
+{
+  "components": [
+    {
+      "name": "feature",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-06-01T15:13:41.751Z",
+      "updated_at": "2025-06-01T18:22:14.539Z",
+      "id": 7405027,
+      "schema": {
+        "headline": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "rokyRfIiS-eS6_4jLRPKRA"
+        },
+        "content": {
+          "type": "text",
+          "pos": 1,
+          "id": "y2e3QlztReK4VQFL2wqnLg",
+          "required": true
+        },
+        "variant": {
+          "type": "option",
+          "pos": 2,
+          "use_uuid": true,
+          "display_name": "variant",
+          "options": [
+            {
+              "_uid": "a95c2167-1662-4dfe-bf37-9f7753166087",
+              "name": "primary",
+              "value": "primary"
+            },
+            {
+              "_uid": "ab458de1-e6f7-455d-9788-68ddaf72340b",
+              "value": "secondary",
+              "name": "secondary"
+            },
+            {
+              "_uid": "64312a3d-2da1-4c71-aff6-bb9a2b32ce22",
+              "value": "tertiary",
+              "name": "tertiary"
+            }
+          ],
+          "id": "dGPzjZaHS6eJI-YT8CzQ_g",
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "feature",
+      "component_group_uuid": "8f5d3937-6ebe-4181-af12-2bcef12a2b4c",
+      "color": "#ef6252",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "grid",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-06-01T15:12:41.902Z",
+      "updated_at": "2025-06-01T19:09:37.529Z",
+      "id": 7405026,
+      "schema": {
+        "headline": {
+          "type": "text",
+          "pos": 0,
+          "id": "--iubyCwQImnBEBX9uViMA"
+        },
+        "items": {
+          "type": "bloks",
+          "pos": 1,
+          "id": "MnRBfDiKQDOavdNKMwA7kA",
+          "required": true,
+          "minimum": 2,
+          "maximum": 4,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "feature",
+            "testimonial"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "grid",
+      "component_group_uuid": "8f5d3937-6ebe-4181-af12-2bcef12a2b4c",
+      "color": "#ef6252",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "hero",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-06-01T15:09:48.035Z",
+      "updated_at": "2025-06-02T15:04:55.343Z",
+      "id": 7405025,
+      "schema": {
+        "headline": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "jKXSVywMQEe04hYdz_MIFQ"
+        },
+        "content": {
+          "type": "text",
+          "pos": 1,
+          "id": "4ESFpoYwTCO44tFlXbGLqw",
+          "required": true
+        },
+        "image": {
+          "type": "asset",
+          "pos": 2,
+          "required": true,
+          "display_name": "image",
+          "filetypes": [
+            "images"
+          ],
+          "id": "fzbBacQWR6Kq-lr_D_NQzA"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "hero",
+      "component_group_uuid": "8f5d3937-6ebe-4181-af12-2bcef12a2b4c",
+      "color": "#ef6252",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "page",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-06-01T15:08:35.752Z",
+      "updated_at": "2025-06-01T15:18:14.336Z",
+      "id": 7405024,
+      "schema": {
+        "blocks": {
+          "type": "bloks",
+          "pos": 0,
+          "id": "XBkCX9VwSCa_y7u-7oxb7g",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_whitelist": [],
+          "component_group_whitelist": [
+            "8f5d3937-6ebe-4181-af12-2bcef12a2b4c"
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "page",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "recipe",
+      "display_name": null,
+      "description": null,
+      "created_at": "2025-06-01T11:27:27.458Z",
+      "updated_at": "2025-06-02T21:01:51.475Z",
+      "id": 7404724,
+      "schema": {
+        "body": {
+          "type": "richtext",
+          "id": "_G36_hXQQu-MUVWIohoLAg",
+          "required": true,
+          "customize_toolbar": true,
+          "toolbar": [
+            "bold",
+            "list",
+            "h2",
+            "h3",
+            "h4",
+            "image",
+            "italic",
+            "link"
+          ],
+          "allow_target_blank": true
+        },
+        "name": {
+          "type": "text",
+          "pos": 1,
+          "id": "x44DB2IQQiu-9jwdyg4hLA",
+          "required": true
+        },
+        "introduction": {
+          "type": "text",
+          "pos": 2,
+          "id": "pojAfKI5TKO37E4-FoTv_A",
+          "required": true
+        },
+        "preparation_time": {
+          "type": "text",
+          "pos": 3,
+          "id": "piLAQ5eyQpqKcv9mrZ-tBw",
+          "required": true,
+          "min_value": 0
+        },
+        "main_img": {
+          "type": "asset",
+          "pos": 4,
+          "id": "2fJ-etfoSY6jz_IhjRSXpw",
+          "required": true,
+          "filetypes": [
+            "images"
+          ]
+        },
+        "category": {
+          "type": "option",
+          "pos": 5,
+          "use_uuid": true,
+          "id": "blq-GeUWTXKJNS0xXs9OEg",
+          "required": true,
+          "options": [
+            {
+              "_uid": "d599a253-c1ec-4b4e-acbc-7cd2e3e200ee",
+              "name": "Meat",
+              "value": "Meat"
+            },
+            {
+              "_uid": "4b93e97c-8d3b-4b8a-b04b-61c9a3c19fb4",
+              "value": "Dessert",
+              "name": "Dessert"
+            },
+            {
+              "_uid": "b84f98c3-c474-4a1a-b544-24081d7306a7",
+              "value": "Salad",
+              "name": "Salad"
+            },
+            {
+              "_uid": "0f466366-6022-4909-8337-6a3aff94fdb3",
+              "value": "Soup",
+              "name": "Soup"
+            },
+            {
+              "_uid": "c94f8424-b506-4668-bff3-4788c916551a",
+              "value": "Pastry",
+              "name": "Pastry"
+            },
+            {
+              "_uid": "d301b552-d7f3-4cae-87a2-b1317d3e04f0",
+              "value": "Pasta",
+              "name": "Pasta"
+            },
+            {
+              "_uid": "535369a8-b82f-4fc4-ac90-9ab438cb44f6",
+              "value": "Vegeterian",
+              "name": "Vegeterian"
+            }
+          ]
+        },
+        "servings": {
+          "type": "number",
+          "pos": 6,
+          "required": true,
+          "id": "T8_hLW4HQlKKMQzUhYw5Ww"
+        },
+        "rating": {
+          "type": "number",
+          "pos": 7,
+          "required": true,
+          "id": "uArmvUp8QjOO3101XRsyAA",
+          "min_value": 1,
+          "max_value": 5,
+          "steps": 1
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "recipe",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    },
+    {
+      "name": "recommended_recipes",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-06-01T15:15:48.768Z",
+      "updated_at": "2025-06-02T20:48:36.270Z",
+      "id": 7405029,
+      "schema": {
+        "headline": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "b2Q036n9Tq-q5WRO42Um1w"
+        },
+        "recipes": {
+          "type": "options",
+          "pos": 1,
+          "id": "GxRP0n1QRCiUqKugPZhODA",
+          "required": true,
+          "source": "internal_stories",
+          "filter_content_type": [
+            "recipe"
+          ],
+          "min_options": "2",
+          "max_options": "3"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "recommended_recipes",
+      "component_group_uuid": "8f5d3937-6ebe-4181-af12-2bcef12a2b4c",
+      "color": "#ef6252",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {},
+      "component_group_name": "Nestable Blocks"
+    },
+    {
+      "name": "testimonial",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-06-01T15:14:24.601Z",
+      "updated_at": "2025-06-02T19:41:58.355Z",
+      "id": 7405028,
+      "schema": {
+        "comment": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "XGZpchN4Rz-kKI1C-VpFHw",
+          "max_length": 260
+        },
+        "name": {
+          "type": "text",
+          "pos": 1,
+          "id": "xfX7VW25SV-v13EOcib25A",
+          "required": true
+        },
+        "image": {
+          "type": "asset",
+          "pos": 2,
+          "filetypes": [
+            "images"
+          ],
+          "required": true,
+          "display_name": "image",
+          "id": "abDfzsdzSOO_E1dCJpSVnw"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "testimonial",
+      "component_group_uuid": null,
+      "color": "#dfe3e8",
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "metadata": {}
+    }
+  ],
+  "component_groups": [
+    {
+      "name": "Nestable Blocks",
+      "id": 559777,
+      "uuid": "8f5d3937-6ebe-4181-af12-2bcef12a2b4c",
+      "parent_id": null,
+      "parent_uuid": null
+    }
+  ]
+}

@@ -1,26 +1,61 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #fffffff;
+  --color-orange: #f49e4c;
+  --color-yellow: #f6c28b;
+  --color-blue: #bad7f2;
+  --color-green: #638b61;
+  --color-dark: #131b23;
+  --color-text: #131b23;
+  --font-primary: 'Lato', serif;
+  --font-secondary: 'Satisfy', cursive;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+}
+
+.wavy-circle {
+  --s: 80px; /* adjust to control the size, matches h-20/w-20 */
+  width: var(--s);
+  aspect-ratio: 1;
+  --g: /calc(var(--s) * 0.123) calc(var(--s) * 0.123)
+    radial-gradient(50% 50%, #000 99%, #0000 101%) no-repeat;
+  mask:
+    calc(50% + var(--s) * 0.417) calc(50% + var(--s) * 0) var(--g),
+    calc(50% + var(--s) * 0.381) calc(50% + var(--s) * 0.169) var(--g),
+    calc(50% + var(--s) * 0.279) calc(50% + var(--s) * 0.31) var(--g),
+    calc(50% + var(--s) * 0.129) calc(50% + var(--s) * 0.396) var(--g),
+    calc(50% + var(--s) * -0.044) calc(50% + var(--s) * 0.414) var(--g),
+    calc(50% + var(--s) * -0.208) calc(50% + var(--s) * 0.361) var(--g),
+    calc(50% + var(--s) * -0.337) calc(50% + var(--s) * 0.245) var(--g),
+    calc(50% + var(--s) * -0.408) calc(50% + var(--s) * 0.087) var(--g),
+    calc(50% + var(--s) * -0.408) calc(50% + var(--s) * -0.087) var(--g),
+    calc(50% + var(--s) * -0.337) calc(50% + var(--s) * -0.245) var(--g),
+    calc(50% + var(--s) * -0.208) calc(50% + var(--s) * -0.361) var(--g),
+    calc(50% + var(--s) * -0.044) calc(50% + var(--s) * -0.414) var(--g),
+    calc(50% + var(--s) * 0.129) calc(50% + var(--s) * -0.396) var(--g),
+    calc(50% + var(--s) * 0.279) calc(50% + var(--s) * -0.31) var(--g),
+    calc(50% + var(--s) * 0.381) calc(50% + var(--s) * -0.169) var(--g),
+    radial-gradient(calc(var(--s) * 0.454), #000 99%, #0000 101%) subtract,
+    calc(50% + var(--s) * 0.485) calc(50% + var(--s) * 0.103) var(--g),
+    calc(50% + var(--s) * 0.401) calc(50% + var(--s) * 0.291) var(--g),
+    calc(50% + var(--s) * 0.248) calc(50% + var(--s) * 0.429) var(--g),
+    calc(50% + var(--s) * 0.052) calc(50% + var(--s) * 0.493) var(--g),
+    calc(50% + var(--s) * -0.153) calc(50% + var(--s) * 0.471) var(--g),
+    calc(50% + var(--s) * -0.332) calc(50% + var(--s) * 0.368) var(--g),
+    calc(50% + var(--s) * -0.453) calc(50% + var(--s) * 0.202) var(--g),
+    calc(50% + var(--s) * -0.495) calc(50% + var(--s) * 0) var(--g),
+    calc(50% + var(--s) * -0.453) calc(50% + var(--s) * -0.202) var(--g),
+    calc(50% + var(--s) * -0.332) calc(50% + var(--s) * -0.368) var(--g),
+    calc(50% + var(--s) * -0.153) calc(50% + var(--s) * -0.471) var(--g),
+    calc(50% + var(--s) * 0.052) calc(50% + var(--s) * -0.493) var(--g),
+    calc(50% + var(--s) * 0.248) calc(50% + var(--s) * -0.429) var(--g),
+    calc(50% + var(--s) * 0.401) calc(50% + var(--s) * -0.291) var(--g),
+    calc(50% + var(--s) * 0.485) calc(50% + var(--s) * -0.103) var(--g);
 }
