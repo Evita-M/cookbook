@@ -80,6 +80,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 - `pnpm start` – Start the production server
 - `pnpm lint` – Lint the codebase
 - `pnpm format` – Format code with Prettier
+- `pnpm test` – Test with Vitest
 - `pnpm refresh-sb` – Pull Storyblok components and generate types
 
 
